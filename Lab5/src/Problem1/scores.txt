@@ -1,0 +1,6 @@
+Ivanov Ivan 74
+Borisov Boris 89
+Igorev Igor 90
+Aslanov Aslan 60
+Syroezhkin Sergei 100
+Abylaev Abylai 100

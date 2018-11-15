@@ -1,0 +1,1 @@
+Read comments in SampleClass.java, AbstractClass.java and Comparable.java

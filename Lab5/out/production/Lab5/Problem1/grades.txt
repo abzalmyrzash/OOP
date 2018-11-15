@@ -1,0 +1,5 @@
+1) Aslanov Aslan - "D"
+2) Ivanov Ivan - "C"
+3) Borisov Boris - "B"
+4) Igorev Igor - "A"
+5) Syroezhkin Sergei - "A"

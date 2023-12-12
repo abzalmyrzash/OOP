@@ -6,10 +6,10 @@ public class Board {
     private static King King1 = new King(1);
     private static King King2 =  new King(2);
 
-    public static boolean TwoPlayerPerspective;
+    public static boolean twoPlayerPerspective;
     public Board(){
         player = 1;
-        TwoPlayerPerspective = false;
+        twoPlayerPerspective = false;
 
         board = new Piece[8][8];
 
@@ -48,22 +48,32 @@ public class Board {
     }
 
     public static void draw(){
-        System.out.println("    A   B   C   D   E   F   G   H");
+        boolean whitePlayerView = !(player == 2 && twoPlayerPerspective);
+
+        String row_of_letters = whitePlayerView ?
+                "A   B   C   D   E   F   G   H" :
+                "H   G   F   E   D   C   B   A";
+
+
+        System.out.println("    " + row_of_letters);
         System.out.println("  +---+---+---+---+---+---+---+---+");
 
         for (int i = 7; i >= 0; i--) {
-            System.out.print(i + 1 + " | ");
+            int row_index = whitePlayerView ? (i + 1) : (8 - i);
+            System.out.print(row_index + " | ");
+
             for (int j = 0; j < 8; j++) {
-                Piece piece = board[i][j];
-                if(player == 2 && TwoPlayerPerspective) piece = board[7 - i][7 - j];
+                Piece piece = whitePlayerView ?
+                        board[i][j] : board[7 - i][7 - j];
                 System.out.print((piece == null ? ' ' : piece.symbol) + " | ");
             }
-            System.out.println(i + 1);
+
+            System.out.println(row_index);
             System.out.println("  +---+---+---+---+---+---+---+---+");
         }
 
 
-        System.out.println("    A   B   C   D   E   F   G   H");
+        System.out.println("    " + row_of_letters);
     }
 
     public static boolean move(Point a, Point b){

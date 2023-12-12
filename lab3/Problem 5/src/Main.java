@@ -19,19 +19,19 @@ public class Main {
                 int x2 = coord2.toLowerCase().charAt(0) - 97;
                 int y2 = Integer.parseInt(coord2.substring(1)) - 1;
 
-                if(Board.player == 2 && Board.TwoPlayerPerspective){
-                    x1 = 7 - x1;
-                    y1 = 7 - y1;
-
-                    x2 = 7 - x2;
-                    y2 = 7 - y2;
-                }
+//                if(Board.player == 2 && Board.twoPlayerPerspective){
+//                    x1 = 7 - x1;
+//                    y1 = 7 - y1;
+//
+//                    x2 = 7 - x2;
+//                    y2 = 7 - y2;
+//                }
 
                 if(Board.move(new Point(x1, y1), new Point(x2, y2)))
                     Board.draw();
             }
             else if(cmd.equals("2PlayerPerspective")){
-                Board.TwoPlayerPerspective = sc.nextBoolean();
+                Board.twoPlayerPerspective = sc.nextBoolean();
                 Board.draw();
             }
             else if(cmd.equals("exit")) break;

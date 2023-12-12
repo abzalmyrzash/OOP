@@ -10,8 +10,7 @@ public class Student
         year = 1;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 

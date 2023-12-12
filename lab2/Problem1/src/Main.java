@@ -5,5 +5,6 @@ public class Main {
         s.nextYear();
         System.out.println("Name: " + s.getName() +
                 "\nID: " + s.getId() + "\nYear: " + s.getYear());
+
     }
 }

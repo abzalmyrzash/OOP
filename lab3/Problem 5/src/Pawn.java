@@ -9,8 +9,8 @@ public class Pawn extends Piece{
         if(piece != null)
             if(piece.team == team) return false;
 
-        if(team == 1) if(b.x < a.x) return false;
-        if(team == 2) if(b.x > a.x) return false;
+        if(team == 1) if(b.y < a.y) return false;
+        if(team == 2) if(b.y > a.y) return false;
 
         int change_x = Math.abs(a.x - b.x);
         int change_y = Math.abs(a.y - b.y);
